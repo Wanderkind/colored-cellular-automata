@@ -8,8 +8,10 @@ grid = np.zeros((grid_width, grid_height), dtype = int)
 
 center = grid_width//2
 start_cell = (center, 1)
+#start_cell_2 = (center + 3, 2)
 #grid[start_cell] = 63
-grid[start_cell] = 15
+#grid[start_cell] = 15
+grid[start_cell] = 52
 #grid[start_cell] = 60
 #grid[start_cell] = 7
 
