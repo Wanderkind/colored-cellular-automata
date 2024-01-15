@@ -26,8 +26,9 @@ def rule(a, b, c):
     a1, a2, a3 = f(a)
     b1, b2, b3 = f(b)
     c1, c2, c3 = f(c)
-    res = (a1^a2^a3)*4 + (b1^b2^b3)*2 + c1^c2^c3 # this line makes the patterns
+    res = (a1^a2^a3)*4 + (b1^b2^b3)*2 + (c1^c2^c3)*1
     return res
+    #return res % 8
 
 def update_grid(current_grid):
     new_grid = np.zeros_like(current_grid)
