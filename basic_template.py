@@ -10,6 +10,7 @@ center = grid_width//2
 start_cell = (center, 1)
 #grid[start_cell] = 63
 grid[start_cell] = 15
+#grid[start_cell] = 60
 #grid[start_cell] = 7
 
 pygame.init()
@@ -29,6 +30,7 @@ def rule(a, b, c):
     b1, b2, b3 = f(b)
     c1, c2, c3 = f(c)
     res = (a1^a2^a1)*16 + (b1^b2^b3)*4 + (c1^c2^c3)*1
+    #res = (a1^a2^a1)*18 + (b1^b2^b3)*22 + (c1^c2^c3)*6
     #res = (a1^a2^a1)*16 + (b1^b2^b3)*3 + (c1^c2^c3)*1
     #res = (a1^a2^a1)*4 + (b1^b2^b3)*2 + (c1^c2^c3)*1
     return res % 64
@@ -42,6 +44,7 @@ def update_grid(current_grid):
                 new_grid[j, i] = current_grid[j, i]
             else:
                 new_grid[j, i] = rule(current_grid[j - 1, i - 1], current_grid[j, i - 1], current_grid[j + 1, i - 1])
+                #new_grid[j, i] = rule(current_grid[j - 1, i - 1], current_grid[j, i], current_grid[j + 1, i - 1])
                 #new_grid[j, i] = rule(current_grid[j - 1, i - 1], current_grid[j, i - 1], current_grid[j + 2, i - 1])
     return new_grid
 
