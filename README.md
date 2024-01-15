@@ -6,4 +6,4 @@
 
 ![image](https://github.com/Wanderkind/colored-cellular-automata/assets/87248089/64e77c2d-559e-41a2-a8f2-67479572db95) <br>
 
-same code, but 16 → 15 in line 34
+same code, but `16` → `15` in line 34
